@@ -118,13 +118,28 @@ body {
 
 }
 
-/* utilities */
+/* ================================================================ 
+Utilities 
+*/
 .flex-group {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap; /* not necessary here, but prevent overflow */
     align-items: center;
 }
+
+/* Inclusively Hidden 
+https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+*/
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 
 
 /* product styles */
